@@ -566,7 +566,7 @@
                     <cost name="Point(s)" typeId="9893-c379-920b-8982" value="10"/>
                   </costs>
                   <modifiers>
-                    <modifier type="cumulative-add" value="" field="annotation" scope="model" affects="self.entries.1e9c-6b93-a335-43c4"/>
+                    <modifier type="cumulative-add" field="annotation" scope="model" affects="self.entries.1e9c-6b93-a335-43c4"/>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="720b-7d21-800d-e20b"/>
@@ -3346,7 +3346,7 @@ At the end of the Declare Mission Reserves Step the Controlling Player of any Un
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Merir Astelan" hidden="false" id="842f-3f85-2b5a-e791">
       <costs>
-        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="220"/>
+        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="180"/>
         <cost name="Reaction Point(s)" typeId="c9ba-097e-c47f-ecc2" value="0"/>
         <cost name="Auxiliary Detachment(s)" typeId="3e8e-05ee-be52-12d6" value="0"/>
         <cost name="Apex Detachment(s)" typeId="159d-855c-533d-f592" value="0"/>
@@ -3360,13 +3360,13 @@ At the end of the Declare Mission Reserves Step the Controlling Player of any Un
           <profiles>
             <profile name="Merir Astelan" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="4519-d2f4-ca66-7bdd">
               <characteristics>
-                <characteristic name="Type" typeId="50fc-9241-d4a2-045b">7</characteristic>
-                <characteristic name="M" typeId="a106-a779-d272-5e93">6</characteristic>
-                <characteristic name="WS" typeId="253c-d694-4695-c89e">5</characteristic>
-                <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">4</characteristic>
+                <characteristic name="Type" typeId="50fc-9241-d4a2-045b">Infantry (Unique, Command)</characteristic>
+                <characteristic name="M" typeId="a106-a779-d272-5e93">7</characteristic>
+                <characteristic name="WS" typeId="253c-d694-4695-c89e">6</characteristic>
+                <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">5</characteristic>
                 <characteristic name="S" typeId="498f-dce1-59fd-d8d7">4</characteristic>
                 <characteristic name="T" typeId="3120-8275-e537-ecd2">4</characteristic>
-                <characteristic name="W" typeId="f5cc-79a3-d302-cc1d">4</characteristic>
+                <characteristic name="W" typeId="f5cc-79a3-d302-cc1d">3</characteristic>
                 <characteristic name="I" typeId="af9d-7db8-dc95-71c1">5</characteristic>
                 <characteristic name="A" typeId="024e-bdb1-7982-25a0">4</characteristic>
                 <characteristic name="LD" typeId="02ad-ebe6-86e7-9fd6">10</characteristic>
@@ -3417,7 +3417,6 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="High Command Detachment Choice" hidden="false" id="f541-7bfc-39c7-f577" type="selectionEntryGroup" targetId="969e-8b5b-1410-cfc6"/>
         <entryLink import="true" name="Prime Unit" hidden="false" id="8856-b84a-42e8-0f73" type="selectionEntry" targetId="3fa2-78b1-637f-7fb2">
           <entryLinks>
             <entryLink import="true" name="Prime Benefits" hidden="false" id="e2b7-8e27-f906-e88a" type="selectionEntryGroup" targetId="a396-b846-c263-6767"/>
@@ -3454,7 +3453,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Luther" hidden="false" id="e136-305b-fa08-26e7">
       <costs>
-        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="210"/>
+        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="160"/>
         <cost name="Reaction Point(s)" typeId="c9ba-097e-c47f-ecc2" value="0"/>
         <cost name="Auxiliary Detachment(s)" typeId="3e8e-05ee-be52-12d6" value="0"/>
         <cost name="Apex Detachment(s)" typeId="159d-855c-533d-f592" value="0"/>
@@ -3468,7 +3467,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
           <profiles>
             <profile name="Luther" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="6110-a268-70fb-d06a">
               <characteristics>
-                <characteristic name="Type" typeId="50fc-9241-d4a2-045b"/>
+                <characteristic name="Type" typeId="50fc-9241-d4a2-045b">Infantry (Unique, Command)</characteristic>
                 <characteristic name="M" typeId="a106-a779-d272-5e93">7</characteristic>
                 <characteristic name="WS" typeId="253c-d694-4695-c89e">6</characteristic>
                 <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">5</characteristic>
@@ -3645,6 +3644,15 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
                     <condition type="atLeast" value="1" field="selections" scope="unit" childId="8cf8-9be5-91d6-c96d" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>Shield</comment>
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="a951-a772-7ce0-0b64"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff9a-9e63-cf28-5d51" shared="true" childName="Proteus Pattern Storm Shield" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
               </modifierGroups>
             </profile>
           </profiles>
@@ -3753,6 +3761,15 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
                     <condition type="atLeast" value="1" field="selections" scope="unit" childId="8cf8-9be5-91d6-c96d" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>Shield</comment>
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="a951-a772-7ce0-0b64"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff9a-9e63-cf28-5d51" shared="true" childName="Proteus Pattern Storm Shield" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
               </modifierGroups>
             </profile>
           </profiles>
@@ -3844,6 +3861,329 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
         <infoLink name="Order Exemplars" id="f183-6c2a-86c6-f09f" hidden="false" type="rule" targetId="8eec-6e7d-b0dd-2c93"/>
         <infoLink name="The Angels of Death" id="4189-b5f2-8e01-2251" hidden="false" type="rule" targetId="7fd2-c16b-0e15-9de7"/>
       </infoLinks>
+      <comment>Elite</comment>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Holguin" hidden="false" id="3ee6-3330-fdbe-a928">
+      <costs>
+        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="150"/>
+        <cost name="Reaction Point(s)" typeId="c9ba-097e-c47f-ecc2" value="0"/>
+        <cost name="Auxiliary Detachment(s)" typeId="3e8e-05ee-be52-12d6" value="0"/>
+        <cost name="Apex Detachment(s)" typeId="159d-855c-533d-f592" value="0"/>
+        <cost name="Combined Warlord and Lord of War Points" typeId="14bd-cad0-cd3d-8b23" value="0"/>
+        <cost name="Mech LB" typeId="7275-cbe8-a563-7152" value="0"/>
+        <cost name="Tank Detachments" typeId="2cdf-186c-a655-d907" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Holguin" hidden="false" id="333d-209c-74a5-e4e7">
+          <profiles>
+            <profile name="Holguin" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="7439-1238-b884-c743">
+              <characteristics>
+                <characteristic name="Type" typeId="50fc-9241-d4a2-045b">Infantry (Unique, Command, Heavy)</characteristic>
+                <characteristic name="M" typeId="a106-a779-d272-5e93">6</characteristic>
+                <characteristic name="WS" typeId="253c-d694-4695-c89e">6</characteristic>
+                <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">5</characteristic>
+                <characteristic name="S" typeId="498f-dce1-59fd-d8d7">4</characteristic>
+                <characteristic name="T" typeId="3120-8275-e537-ecd2">4</characteristic>
+                <characteristic name="W" typeId="f5cc-79a3-d302-cc1d">4</characteristic>
+                <characteristic name="I" typeId="af9d-7db8-dc95-71c1">5</characteristic>
+                <characteristic name="A" typeId="024e-bdb1-7982-25a0">5</characteristic>
+                <characteristic name="LD" typeId="02ad-ebe6-86e7-9fd6">10</characteristic>
+                <characteristic name="CL" typeId="9cd1-0e7c-2cd6-5f2f">9</characteristic>
+                <characteristic name="WP" typeId="f714-1726-37d3-44df">9</characteristic>
+                <characteristic name="IN" typeId="29c5-925d-5b1d-1e77">9</characteristic>
+                <characteristic name="SAV" typeId="03bd-4ecb-351d-143b">2+</characteristic>
+                <characteristic name="INV" typeId="a951-a772-7ce0-0b64">4+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6003-f547-1705-6903" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ddd-173c-e62a-7c82" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="[Allegiance]" id="1f47-18be-fde7-5ebb" hidden="false" type="profile" targetId="bb66-f1f6-4d65-5a07"/>
+            <infoLink name="[Legiones Astartes]" id="19b6-db5e-274c-3c38" hidden="false" type="profile" targetId="641c-ca0a-7093-4525"/>
+            <infoLink name="Master of the Legion" id="608e-ce6c-4010-072a" hidden="false" type="profile" targetId="6cd2-96be-b703-6d57"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="9871-cb62-5283-2216" id="274b-8575-4283-e4b9" primary="false" name="Command Model Sub-type"/>
+            <categoryLink targetId="594d-fa82-13cb-a345" id="e082-408c-d638-3820" primary="false" name="Infantry Model Type"/>
+            <categoryLink targetId="b980-187b-2b17-d635" id="2161-0dea-7326-49d0" primary="false" name="Unique Model Sub-Type"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Deathbringer’s Aegis" hidden="false" id="0a3a-149d-24d2-477b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a871-b867-4104-170f"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2afd-29f9-d611-0328"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Feel No Pain (X)" id="647a-3a61-892a-858b" hidden="false" type="rule" targetId="89b5-7320-db15-fd60">
+              <modifiers>
+                <modifier type="set" value="Feel No Pain (5+)" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Viridian Blade" hidden="false" id="9f49-f74e-bf04-4412">
+          <profiles>
+            <profile name="The Viridian Blade" typeId="3587-6dcd-005c-c263" typeName="Melee Weapon" hidden="false" id="5d6b-23f9-3dae-18a6">
+              <characteristics>
+                <characteristic name="IM" typeId="6eec-4093-f946-1014">-1</characteristic>
+                <characteristic name="AM" typeId="03d0-6094-84f0-e27e">A</characteristic>
+                <characteristic name="SM" typeId="4505-de6f-d4ae-6280">+2</characteristic>
+                <characteristic name="AP" typeId="a014-126b-3b7b-27e8">2</characteristic>
+                <characteristic name="D" typeId="6a9d-4feb-065a-33e7">2</characteristic>
+                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e">Master-crafted, Reaping Blow (2)</characteristic>
+                <characteristic name="Traits" typeId="76e3-c188-bc65-3467">Sword of the Order</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reaping Blow (X)" id="21fa-6146-2860-a99e" hidden="false" type="rule" targetId="951f-eee4-02b7-b014"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="53a4-e364-0293-6d76"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c30-a8b9-f01f-0858"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6cef-9ce6-bdab-640a" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Prime Benefits" hidden="false" id="833a-a22c-1926-f1b3" type="selectionEntryGroup" targetId="a396-b846-c263-6767"/>
+        <entryLink import="true" name="Volkite charger" hidden="false" id="46a8-5038-ae8c-7962" type="selectionEntry" targetId="93e7-6a83-1e9e-204a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ccf-a28f-81ab-4831"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90c8-4e4f-d5eb-5b1f"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Farith Redloss" hidden="false" id="6ed7-db06-eaa8-cb22">
+      <costs>
+        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="220"/>
+        <cost name="Reaction Point(s)" typeId="c9ba-097e-c47f-ecc2" value="0"/>
+        <cost name="Auxiliary Detachment(s)" typeId="3e8e-05ee-be52-12d6" value="0"/>
+        <cost name="Apex Detachment(s)" typeId="159d-855c-533d-f592" value="0"/>
+        <cost name="Combined Warlord and Lord of War Points" typeId="14bd-cad0-cd3d-8b23" value="0"/>
+        <cost name="Mech LB" typeId="7275-cbe8-a563-7152" value="0"/>
+        <cost name="Tank Detachments" typeId="2cdf-186c-a655-d907" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Farith Redloss" hidden="false" id="375a-fa35-d8af-4bb3">
+          <profiles>
+            <profile name="Farith Redloss" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="acdb-5162-ca4e-5c6c">
+              <characteristics>
+                <characteristic name="Type" typeId="50fc-9241-d4a2-045b">Infantry (Unique, Command)</characteristic>
+                <characteristic name="M" typeId="a106-a779-d272-5e93">7</characteristic>
+                <characteristic name="WS" typeId="253c-d694-4695-c89e">6</characteristic>
+                <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">5</characteristic>
+                <characteristic name="S" typeId="498f-dce1-59fd-d8d7">4</characteristic>
+                <characteristic name="T" typeId="3120-8275-e537-ecd2">4</characteristic>
+                <characteristic name="W" typeId="f5cc-79a3-d302-cc1d">3</characteristic>
+                <characteristic name="I" typeId="af9d-7db8-dc95-71c1">5</characteristic>
+                <characteristic name="A" typeId="024e-bdb1-7982-25a0">4</characteristic>
+                <characteristic name="LD" typeId="02ad-ebe6-86e7-9fd6">10</characteristic>
+                <characteristic name="CL" typeId="9cd1-0e7c-2cd6-5f2f">9</characteristic>
+                <characteristic name="WP" typeId="f714-1726-37d3-44df">9</characteristic>
+                <characteristic name="IN" typeId="29c5-925d-5b1d-1e77">9</characteristic>
+                <characteristic name="SAV" typeId="03bd-4ecb-351d-143b">2+</characteristic>
+                <characteristic name="INV" typeId="a951-a772-7ce0-0b64">4+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="[Legiones Astartes]" id="8fab-5b2f-bc4f-87ff" hidden="false" type="profile" targetId="641c-ca0a-7093-4525"/>
+            <infoLink name="[Allegiance]" id="8539-d3b3-b346-db89" hidden="false" type="profile" targetId="bb66-f1f6-4d65-5a07"/>
+            <infoLink name="Master of the Legion" id="a50d-97de-2ba6-4bc9" hidden="false" type="profile" targetId="6cd2-96be-b703-6d57"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5627-0646-5b8d-c524" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d32e-f457-2cf5-fa1e" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink targetId="9871-cb62-5283-2216" id="9cb9-7f3c-9026-937f" primary="false" name="Command Model Sub-type"/>
+            <categoryLink targetId="594d-fa82-13cb-a345" id="47eb-da65-215b-4643" primary="false" name="Infantry Model Type"/>
+            <categoryLink targetId="b980-187b-2b17-d635" id="08a9-37b1-18e9-4063" primary="false" name="Unique Model Sub-Type"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Dreadbringer’s Plate" hidden="false" id="2036-8e80-e2d1-e2f2">
+          <profiles>
+            <profile name="The Dreadbringer’s Plate" typeId="5ec5-e0c3-1701-6f16" typeName="Wargear" hidden="false" id="e690-fb2c-626c-e5bf">
+              <characteristics>
+                <characteristic name="Summary" typeId="8e7d-a0ae-fd85-983c">This Wargear reduces the amount of Damage suffered from Melta and Poisoned.</characteristic>
+                <characteristic name="Description" typeId="9944-2f6d-d61b-03b5">Against any weapon with the Crawling Fire or Armourbane (Melta) special rules, this Invulnerable Save is increased to 2+ and any weapon with the Poisoned (X) special rule can only wound Farith Redloss on the roll of 6+.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7fcf-c535-01f3-45bf"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b47-d447-90ea-2d47"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Axe of Castigation" hidden="false" id="9285-caa3-9b7b-3ff6">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e346-f88f-6025-b574"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39f2-cfd4-0507-6786"/>
+          </constraints>
+          <profiles>
+            <profile name="The Axe of Castigation (Overhead Strike)" typeId="3587-6dcd-005c-c263" typeName="Melee Weapon" hidden="false" id="70c5-57da-8897-9fbf">
+              <characteristics>
+                <characteristic name="IM" typeId="6eec-4093-f946-1014">-1</characteristic>
+                <characteristic name="AM" typeId="03d0-6094-84f0-e27e">A</characteristic>
+                <characteristic name="SM" typeId="4505-de6f-d4ae-6280">+3</characteristic>
+                <characteristic name="AP" typeId="a014-126b-3b7b-27e8">2</characteristic>
+                <characteristic name="D" typeId="6a9d-4feb-065a-33e7">2</characteristic>
+                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e"/>
+                <characteristic name="Traits" typeId="76e3-c188-bc65-3467">Power</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Axe of Castigation (Sweeping Strike) " typeId="3587-6dcd-005c-c263" typeName="Melee Weapon" hidden="false" id="4450-1151-3273-adbe">
+              <characteristics>
+                <characteristic name="IM" typeId="6eec-4093-f946-1014">-1</characteristic>
+                <characteristic name="AM" typeId="03d0-6094-84f0-e27e">A</characteristic>
+                <characteristic name="SM" typeId="4505-de6f-d4ae-6280">S</characteristic>
+                <characteristic name="AP" typeId="a014-126b-3b7b-27e8">2</characteristic>
+                <characteristic name="D" typeId="6a9d-4feb-065a-33e7">2</characteristic>
+                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e">Reaping Blow (3)</characteristic>
+                <characteristic name="Traits" typeId="76e3-c188-bc65-3467">Power</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reaping Blow (X)" id="13fa-36c5-8b7c-a571" hidden="false" type="rule" targetId="951f-eee4-02b7-b014"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Prime Benefits" hidden="false" id="dbe9-80e0-57e4-5e97" type="selectionEntryGroup" targetId="a396-b846-c263-6767"/>
+        <entryLink import="true" name="Frag grenades" hidden="false" id="bef2-3eb4-fb6f-8438" type="selectionEntry" targetId="60e4-ca33-2e68-9afc">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3bfb-f7d9-5880-56c7"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="42f7-d75b-a8b7-8118"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Rad grenades" hidden="false" id="6d70-01e9-1faf-4561" type="selectionEntry" targetId="cd5f-1eff-df69-6bd2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eedc-a4f6-1ebc-946e"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f01-d810-7045-8628"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Krak grenades" hidden="false" id="9513-6602-2da7-5112" type="selectionEntry" targetId="fa20-82bc-c7de-9e97">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3944-f8ca-03a8-f256"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec47-84f5-3f86-904a"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Melta bombs" hidden="false" id="925d-b4c1-220e-bdea" type="selectionEntry" targetId="2eb4-687e-a515-ee3d">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1031-9b12-8cf1-357a"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="14d2-cb57-67ed-aa8e"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Phosphex bombs" hidden="false" id="3111-e215-a7a3-1fbf" type="selectionEntry" targetId="5ad2-c3b4-f5eb-5b10">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8243-ec5c-a648-0d34"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a45a-9223-69c5-f194"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8bdf-39e3-4776-3053" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <rules>
+        <rule name="The Axe of Castigation" id="631e-3e93-eec6-43f6" hidden="false">
+          <description>The Axe of Castigation is considered a single weapon with two profiles that represent different fighting styles employed by Farith Redloss. In each Fight sub-phase Farith Redloss’ controlling player must choose one of these two profiles to use for all of his attacks.</description>
+        </rule>
+        <rule name="Master of the Arsenal" id="62b7-fbf1-a685-f8d0" hidden="false">
+          <description>At the start of any battle, the controlling player may select one of the following weapons – Farith Redloss gains the use of that weapon for the duration of the battle:
+
+• Tyrhenian pattern Neural Shredder Carbine
+• Magaron pattern Atomantic Pulse Pistol
+• Selenite Shard-bolt Pistol</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Master of the Arsenal" id="42ba-9327-03d2-359e" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tyrhenian pattern Neural Shredder Carbine" hidden="false" id="0515-5c99-230a-0906">
+              <profiles>
+                <profile name="Neural Shredder Carbine" typeId="c591-09ed-3e6f-eb2b" typeName="Ranged Weapon" hidden="false" id="7fce-6ea3-9e14-e08a">
+                  <characteristics>
+                    <characteristic name="R" typeId="cdb0-8654-6840-1037">18&quot;</characteristic>
+                    <characteristic name="FP" typeId="5037-1f27-1790-e355">1</characteristic>
+                    <characteristic name="RS" typeId="b9da-ee13-79f9-fa63">4</characteristic>
+                    <characteristic name="AP" typeId="7a23-0248-2b94-5951">2</characteristic>
+                    <characteristic name="D" typeId="88c3-1ca5-7dc1-f291">2</characteristic>
+                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Poison (4+), Pinning (1)</characteristic>
+                    <characteristic name="Traits" typeId="1247-79d2-6cc1-8a03">Assault</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Poisoned (X)" id="9fb8-f7c5-6e32-274b" hidden="false" type="rule" targetId="076f-2c91-c58b-71b3"/>
+                <infoLink name="Pinning (X)" id="b2bd-aa9b-1ad0-2b0c" hidden="false" type="rule" targetId="88b6-6493-e4d7-1805"/>
+              </infoLinks>
+              <rules>
+                <rule name="Ignores Cover" id="5c26-8b6d-aff2-da1a" hidden="false">
+                  <description>Cover Saves and Damage Mitigation rolls granted by the Shrouded special rule cannot be taken against Wounds or Hull Point damage caused by weapons with the Ignores Cover special rule. This includes Cover Saves granted by Reactions and other special rules as well as Cover Saves conferred by terrain.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Magaron pattern Atomantic Pulse Pistol" hidden="false" id="d278-9f74-9aea-6976">
+              <profiles>
+                <profile name="Atomantic Pulse Pistol" typeId="c591-09ed-3e6f-eb2b" typeName="Ranged Weapon" hidden="false" id="80b7-e892-6351-5099">
+                  <characteristics>
+                    <characteristic name="R" typeId="cdb0-8654-6840-1037">6</characteristic>
+                    <characteristic name="FP" typeId="5037-1f27-1790-e355">3</characteristic>
+                    <characteristic name="RS" typeId="b9da-ee13-79f9-fa63">8</characteristic>
+                    <characteristic name="AP" typeId="7a23-0248-2b94-5951">2</characteristic>
+                    <characteristic name="D" typeId="88c3-1ca5-7dc1-f291">1</characteristic>
+                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Pistol, Lance, Shock Pulse</characteristic>
+                    <characteristic name="Traits" typeId="1247-79d2-6cc1-8a03">Assault</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Lance" id="b450-63fd-d978-5496" hidden="false">
+                  <description>Weapons with the Lance special rule count Vehicle Armour Values that are higher than 12 as 12.</description>
+                </rule>
+                <rule name="Shock Pulse" id="e3a8-5e9b-10c8-2612" hidden="false">
+                  <description>Any model with the Vehicle, Dreadnought or Automata Unit Type that suffers a Penetrating Hit or unsaved Wound from an attack with this special rule may only make Snap Shots when it next makes a Shooting Attack either as part of a Reaction or during its controlling player’s Shooting phase.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Selenite Shard-bolt Pistol" hidden="false" id="ec7a-6744-3acd-5bd4">
+              <profiles>
+                <profile name="Shard-bolt Pistol" typeId="c591-09ed-3e6f-eb2b" typeName="Ranged Weapon" hidden="false" id="f0da-b8be-2bf0-0345">
+                  <characteristics>
+                    <characteristic name="R" typeId="cdb0-8654-6840-1037">12</characteristic>
+                    <characteristic name="FP" typeId="5037-1f27-1790-e355">3</characteristic>
+                    <characteristic name="RS" typeId="b9da-ee13-79f9-fa63">4</characteristic>
+                    <characteristic name="AP" typeId="7a23-0248-2b94-5951">5</characteristic>
+                    <characteristic name="D" typeId="88c3-1ca5-7dc1-f291">1</characteristic>
+                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Pistol, Rending (6+), Moonsilver</characteristic>
+                    <characteristic name="Traits" typeId="1247-79d2-6cc1-8a03">Assault</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Rending (X)" id="9baf-bb3e-f9f3-858f" hidden="false" type="rule" targetId="167f-2a64-6e61-505b"/>
+              </infoLinks>
+              <rules>
+                <rule name="Moonsilver" id="1d6d-4b57-56c1-c38b" hidden="false">
+                  <description>Any unsaved Wound caused against a model with the Daemon Unit Type or Psyker Sub-type is instead counted as two Wounds. Wounds caused in excess of the model’s remaining Wounds do not spill over to other models.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa60-b269-ca77-bc4d"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c02c-077e-3bb0-e978"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -3941,8 +4281,8 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
     </entryLink>
     <entryLink import="true" name="Merir Astelan" hidden="false" id="0fca-5cd8-8dbb-a9cb" type="selectionEntry" targetId="842f-3f85-2b5a-e791">
       <categoryLinks>
-        <categoryLink targetId="d9a6-9b5f-b18a-4d63" id="a799-3ccd-26a2-82be" primary="true" name="High Command"/>
         <categoryLink targetId="9776-4805-2e0b-1f0f" id="b942-e187-0552-11ac" primary="false" name="Dark Angels"/>
+        <categoryLink targetId="6dbf-654a-f06f-2d69" id="881b-6eb5-3bab-1aee" primary="true" name="Command"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Luther" hidden="false" id="8d99-8089-2560-05b6" type="selectionEntry" targetId="e136-305b-fa08-26e7">
@@ -3955,6 +4295,18 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
       <categoryLinks>
         <categoryLink targetId="5d5e-958f-e388-50b5" id="d61a-9938-b71c-73c6" primary="true" name="Elites"/>
         <categoryLink targetId="9776-4805-2e0b-1f0f" id="8534-f970-ee57-0620" primary="false" name="Dark Angels"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Holguin" hidden="false" id="b1ad-dcdb-dc81-e19e" type="selectionEntry" targetId="3ee6-3330-fdbe-a928">
+      <categoryLinks>
+        <categoryLink targetId="6dbf-654a-f06f-2d69" id="5669-0f3a-0f58-add1" primary="true" name="Command"/>
+        <categoryLink targetId="9776-4805-2e0b-1f0f" id="cde1-ba18-53f7-4f55" primary="false" name="Dark Angels"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Farith Redloss" hidden="false" id="3fc2-68b7-ec5c-7b7d" type="selectionEntry" targetId="6ed7-db06-eaa8-cb22">
+      <categoryLinks>
+        <categoryLink targetId="9776-4805-2e0b-1f0f" id="cfe9-44a3-0c89-c31f" primary="false" name="Dark Angels"/>
+        <categoryLink targetId="6dbf-654a-f06f-2d69" id="7c60-0450-2e12-8d05" primary="true" name="Command"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
