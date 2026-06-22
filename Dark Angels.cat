@@ -3865,7 +3865,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Holguin" hidden="false" id="3ee6-3330-fdbe-a928">
       <costs>
-        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="150"/>
+        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="180"/>
         <cost name="Reaction Point(s)" typeId="c9ba-097e-c47f-ecc2" value="0"/>
         <cost name="Auxiliary Detachment(s)" typeId="3e8e-05ee-be52-12d6" value="0"/>
         <cost name="Apex Detachment(s)" typeId="159d-855c-533d-f592" value="0"/>
@@ -3879,7 +3879,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
             <profile name="Holguin" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="7439-1238-b884-c743">
               <characteristics>
                 <characteristic name="Type" typeId="50fc-9241-d4a2-045b">Infantry (Unique, Command, Heavy)</characteristic>
-                <characteristic name="M" typeId="a106-a779-d272-5e93">6</characteristic>
+                <characteristic name="M" typeId="a106-a779-d272-5e93">7</characteristic>
                 <characteristic name="WS" typeId="253c-d694-4695-c89e">6</characteristic>
                 <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">5</characteristic>
                 <characteristic name="S" typeId="498f-dce1-59fd-d8d7">4</characteristic>
@@ -3909,6 +3909,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
             <categoryLink targetId="9871-cb62-5283-2216" id="274b-8575-4283-e4b9" primary="false" name="Command Model Sub-type"/>
             <categoryLink targetId="594d-fa82-13cb-a345" id="e082-408c-d638-3820" primary="false" name="Infantry Model Type"/>
             <categoryLink targetId="b980-187b-2b17-d635" id="2161-0dea-7326-49d0" primary="false" name="Unique Model Sub-Type"/>
+            <categoryLink targetId="1e7d-9066-28d2-97a0" id="9af8-6a8c-e0c7-9949" primary="false" name="Heavy Model Sub-Type"/>
           </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="The Deathbringer’s Aegis" hidden="false" id="0a3a-149d-24d2-477b">
@@ -3933,7 +3934,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
                 <characteristic name="SM" typeId="4505-de6f-d4ae-6280">+2</characteristic>
                 <characteristic name="AP" typeId="a014-126b-3b7b-27e8">2</characteristic>
                 <characteristic name="D" typeId="6a9d-4feb-065a-33e7">2</characteristic>
-                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e">Master-crafted, Reaping Blow (2)</characteristic>
+                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e">Reaping Blow (2)</characteristic>
                 <characteristic name="Traits" typeId="76e3-c188-bc65-3467">Sword of the Order</characteristic>
               </characteristics>
             </profile>
@@ -3958,7 +3959,22 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90c8-4e4f-d5eb-5b1f"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Arae-shrike" hidden="false" id="8e8a-4152-2031-31f8" type="selectionEntry" targetId="bd7b-1511-997a-f275">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c0d-cae6-f42c-4042"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4449-21b2-5ada-5774"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Slow and Purposeful" id="c1ab-459f-3dbb-59da" hidden="false" type="rule" targetId="6a8e-e508-abc9-cb3e"/>
+        <infoLink name="Implacable Advance" id="9d81-a1d1-e9fb-cc20" hidden="false" type="rule" targetId="3898-aafb-35e0-141b"/>
+        <infoLink name="Bulky (X)" id="a84a-2c32-b8ef-1002" hidden="false" type="rule" targetId="50ad-a9a5-1f1d-9a25">
+          <modifiers>
+            <modifier type="set" value="Bulky (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Farith Redloss" hidden="false" id="6ed7-db06-eaa8-cb22">
       <costs>
@@ -3971,7 +3987,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
         <cost name="Tank Detachments" typeId="2cdf-186c-a655-d907" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Farith Redloss" hidden="false" id="375a-fa35-d8af-4bb3">
+        <selectionEntry type="model" import="true" name="Farith Redloss" hidden="false" id="375a-fa35-d8af-4bb3" sortIndex="1">
           <profiles>
             <profile name="Farith Redloss" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="acdb-5162-ca4e-5c6c">
               <characteristics>
@@ -4013,7 +4029,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
             <profile name="The Dreadbringer’s Plate" typeId="5ec5-e0c3-1701-6f16" typeName="Wargear" hidden="false" id="e690-fb2c-626c-e5bf">
               <characteristics>
                 <characteristic name="Summary" typeId="8e7d-a0ae-fd85-983c">This Wargear reduces the amount of Damage suffered from Melta and Poisoned.</characteristic>
-                <characteristic name="Description" typeId="9944-2f6d-d61b-03b5">Against any weapon with the Crawling Fire or Armourbane (Melta) special rules, this Invulnerable Save is increased to 2+ and any weapon with the Poisoned (X) special rule can only wound Farith Redloss on the roll of 6+.</characteristic>
+                <characteristic name="Description" typeId="9944-2f6d-d61b-03b5">Against any weapon with Blast (X) or Armourbane (Melta) special rules, this Invulnerable Save is increased to 3+ and any weapon with the Poisoned (X) special rule can only wound Farith Redloss on the roll of 6+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4021,8 +4037,11 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7fcf-c535-01f3-45bf"/>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b47-d447-90ea-2d47"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Blast (X)" id="c021-200c-9623-ba78" hidden="false" type="rule" targetId="8687-05f8-7034-412c"/>
+          </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="The Axe of Castigation" hidden="false" id="9285-caa3-9b7b-3ff6">
+        <selectionEntry type="upgrade" import="true" name="The Axe of Castigation" hidden="false" id="9285-caa3-9b7b-3ff6" sortIndex="2">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e346-f88f-6025-b574"/>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39f2-cfd4-0507-6786"/>
@@ -4030,12 +4049,12 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
           <profiles>
             <profile name="The Axe of Castigation (Overhead Strike)" typeId="3587-6dcd-005c-c263" typeName="Melee Weapon" hidden="false" id="70c5-57da-8897-9fbf">
               <characteristics>
-                <characteristic name="IM" typeId="6eec-4093-f946-1014">-1</characteristic>
-                <characteristic name="AM" typeId="03d0-6094-84f0-e27e">A</characteristic>
+                <characteristic name="IM" typeId="6eec-4093-f946-1014">-3</characteristic>
+                <characteristic name="AM" typeId="03d0-6094-84f0-e27e">+1</characteristic>
                 <characteristic name="SM" typeId="4505-de6f-d4ae-6280">+3</characteristic>
                 <characteristic name="AP" typeId="a014-126b-3b7b-27e8">2</characteristic>
                 <characteristic name="D" typeId="6a9d-4feb-065a-33e7">2</characteristic>
-                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e"/>
+                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e">Breaching (5+)</characteristic>
                 <characteristic name="Traits" typeId="76e3-c188-bc65-3467">Power</characteristic>
               </characteristics>
             </profile>
@@ -4053,6 +4072,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
           </profiles>
           <infoLinks>
             <infoLink name="Reaping Blow (X)" id="13fa-36c5-8b7c-a571" hidden="false" type="rule" targetId="951f-eee4-02b7-b014"/>
+            <infoLink name="Breaching (X)" id="fc04-f8ff-b494-c433" hidden="false" type="rule" targetId="b094-0b64-eb57-aed6"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -4105,7 +4125,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Master of the Arsenal" id="42ba-9327-03d2-359e" hidden="false" sortIndex="1">
+        <selectionEntryGroup name="Master of the Arsenal" id="42ba-9327-03d2-359e" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Tyrhenian pattern Neural Shredder Carbine" hidden="false" id="0515-5c99-230a-0906">
               <profiles>
@@ -4140,7 +4160,7 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
                     <characteristic name="RS" typeId="b9da-ee13-79f9-fa63">8</characteristic>
                     <characteristic name="AP" typeId="7a23-0248-2b94-5951">2</characteristic>
                     <characteristic name="D" typeId="88c3-1ca5-7dc1-f291">1</characteristic>
-                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Pistol, Lance, Shock Pulse</characteristic>
+                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Pistol, Lance, Suppressive (1)</characteristic>
                     <characteristic name="Traits" typeId="1247-79d2-6cc1-8a03">Assault</characteristic>
                   </characteristics>
                 </profile>
@@ -4149,10 +4169,10 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
                 <rule name="Lance" id="b450-63fd-d978-5496" hidden="false">
                   <description>Weapons with the Lance special rule count Vehicle Armour Values that are higher than 12 as 12.</description>
                 </rule>
-                <rule name="Shock Pulse" id="e3a8-5e9b-10c8-2612" hidden="false">
-                  <description>Any model with the Vehicle, Dreadnought or Automata Unit Type that suffers a Penetrating Hit or unsaved Wound from an attack with this special rule may only make Snap Shots when it next makes a Shooting Attack either as part of a Reaction or during its controlling player’s Shooting phase.</description>
-                </rule>
               </rules>
+              <infoLinks>
+                <infoLink name="Suppressive (X)" id="8ce4-3cc9-56b0-6d56" hidden="false" type="rule" targetId="001f-53f3-4d87-4b43"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Selenite Shard-bolt Pistol" hidden="false" id="ec7a-6744-3acd-5bd4">
               <profiles>
@@ -4163,19 +4183,15 @@ weapon with the Force or Psychic Focus special rules and Wounds inflicted by Pe
                     <characteristic name="RS" typeId="b9da-ee13-79f9-fa63">4</characteristic>
                     <characteristic name="AP" typeId="7a23-0248-2b94-5951">5</characteristic>
                     <characteristic name="D" typeId="88c3-1ca5-7dc1-f291">1</characteristic>
-                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Pistol, Rending (6+), Moonsilver</characteristic>
+                    <characteristic name="Special Rules" typeId="5aad-137a-8ee2-63fd">Pistol, Rending (6+), Hatred (Malefic, Psyker)</characteristic>
                     <characteristic name="Traits" typeId="1247-79d2-6cc1-8a03">Assault</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink name="Rending (X)" id="9baf-bb3e-f9f3-858f" hidden="false" type="rule" targetId="167f-2a64-6e61-505b"/>
+                <infoLink name="Hatred (X)" id="5b8e-04e3-2b0e-810e" hidden="false" type="rule" targetId="0612-95d5-46ae-c5ee"/>
               </infoLinks>
-              <rules>
-                <rule name="Moonsilver" id="1d6d-4b57-56c1-c38b" hidden="false">
-                  <description>Any unsaved Wound caused against a model with the Daemon Unit Type or Psyker Sub-type is instead counted as two Wounds. Wounds caused in excess of the model’s remaining Wounds do not spill over to other models.</description>
-                </rule>
-              </rules>
             </selectionEntry>
           </selectionEntries>
           <constraints>
