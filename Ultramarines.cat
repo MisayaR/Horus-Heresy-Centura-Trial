@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="656a-07b6-d4fd-57af" name="                        XIII - Ultramarines" gameSystemId="sys-9fe4-1dc3-b7c2-73cf" gameSystemRevision="1" revision="15" authorUrl="https://github.com/BSData/horus-heresy-3rd-edition/" authorContact="https://github.com/BSData/horus-heresy-3rd-edition/issues" authorName="The4D6" battleScribeVersion="2.03" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="656a-07b6-d4fd-57af" name="                        XIII - Ultramarines" gameSystemId="sys-9fe4-1dc3-b7c2-73cf" gameSystemRevision="1" revision="16" authorUrl="https://github.com/BSData/horus-heresy-3rd-edition/" authorContact="https://github.com/BSData/horus-heresy-3rd-edition/issues" authorName="The4D6" battleScribeVersion="2.03" type="catalogue">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Roboute Guilliman" hidden="false" id="8b5a-f212-1993-60bb" publicationId="b905-0414-1057-bb34" page="248">
       <selectionEntries>
@@ -2129,6 +2129,129 @@ When any Models in a Unit entirely composed of Models with this Special Rule ent
         </rule>
       </rules>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Aeonid Thiel" hidden="false" id="2b32-2779-5294-4f52">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Aeonid Thiel" hidden="false" id="6f2d-2240-0856-f81c">
+          <profiles>
+            <profile name="Aeonid Thiel" typeId="a76f-8e23-8c3e-166d" typeName="Profile" hidden="false" id="5d4c-5faa-0b9e-7e5e">
+              <characteristics>
+                <characteristic name="Type" typeId="50fc-9241-d4a2-045b">Infantry (Unique, Command)</characteristic>
+                <characteristic name="M" typeId="a106-a779-d272-5e93">7</characteristic>
+                <characteristic name="WS" typeId="253c-d694-4695-c89e">5</characteristic>
+                <characteristic name="BS" typeId="0cd5-b269-e3bc-028b">5</characteristic>
+                <characteristic name="S" typeId="498f-dce1-59fd-d8d7">4</characteristic>
+                <characteristic name="T" typeId="3120-8275-e537-ecd2">4</characteristic>
+                <characteristic name="W" typeId="f5cc-79a3-d302-cc1d">2</characteristic>
+                <characteristic name="I" typeId="af9d-7db8-dc95-71c1">5</characteristic>
+                <characteristic name="A" typeId="024e-bdb1-7982-25a0">3</characteristic>
+                <characteristic name="LD" typeId="02ad-ebe6-86e7-9fd6">9</characteristic>
+                <characteristic name="CL" typeId="9cd1-0e7c-2cd6-5f2f">8</characteristic>
+                <characteristic name="WP" typeId="f714-1726-37d3-44df">8</characteristic>
+                <characteristic name="IN" typeId="29c5-925d-5b1d-1e77">8</characteristic>
+                <characteristic name="SAV" typeId="03bd-4ecb-351d-143b">2+</characteristic>
+                <characteristic name="INV" typeId="a951-a772-7ce0-0b64">5+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e0e-b3ba-757a-1208" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d0ba-5b11-b6ef-b9ee" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink targetId="594d-fa82-13cb-a345" id="21fc-9067-ccc2-7195" primary="false" name="Infantry Model Type"/>
+            <categoryLink targetId="b980-187b-2b17-d635" id="69bd-2838-7988-7e1d" primary="false" name="Unique Model Sub-Type"/>
+            <categoryLink targetId="9871-cb62-5283-2216" id="cdc0-2758-b564-d61f" primary="false" name="Command Model Sub-type"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Electromagnetic Longsword" hidden="false" id="43b5-353a-f06c-44df">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="67db-209b-5812-b3ab" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c786-28c0-b849-5ae4" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Electromagnetic Longsword" typeId="3587-6dcd-005c-c263" typeName="Melee Weapon" hidden="false" id="2705-48ad-fd4b-324b">
+              <characteristics>
+                <characteristic name="IM" typeId="6eec-4093-f946-1014">-1</characteristic>
+                <characteristic name="AM" typeId="03d0-6094-84f0-e27e">A</characteristic>
+                <characteristic name="SM" typeId="4505-de6f-d4ae-6280">+1</characteristic>
+                <characteristic name="AP" typeId="a014-126b-3b7b-27e8">2</characteristic>
+                <characteristic name="D" typeId="6a9d-4feb-065a-33e7">2</characteristic>
+                <characteristic name="Special Rules" typeId="ebe0-7b28-b40c-694e">Breaching (6+), Duellist&apos;s Edge (1)</characteristic>
+                <characteristic name="Traits" typeId="76e3-c188-bc65-3467">Power</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Duellist&apos;s Edge (X)" id="d651-ea5d-332e-439d" hidden="false" type="rule" targetId="94bc-c69f-99b6-8ba0"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="[Legiones Astartes]" id="f055-11f8-0b2e-02d3" hidden="false" type="profile" targetId="641c-ca0a-7093-4525"/>
+        <infoLink name="[Allegiance]" id="93b0-9c0e-9785-dc58" hidden="false" type="profile" targetId="bb66-f1f6-4d65-5a07"/>
+        <infoLink name="Hatred (X)" id="e38f-17c0-0b6c-ab59" hidden="false" type="rule" targetId="0612-95d5-46ae-c5ee">
+          <modifiers>
+            <modifier type="set" value="Hatred (Legiones Astartes)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1ae1-0b2d-b8f5-a747" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="597e-83d8-32e1-8eaa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Bolter" hidden="false" id="c7af-f8b6-357f-87b8" type="selectionEntry" targetId="d3f9-b9e6-3ea5-cc8e">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fa62-44b8-8653-ca4a" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8933-577a-226b-8190" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Bolt pistol" hidden="false" id="00bb-56c6-691d-dba1" type="selectionEntry" targetId="2942-f783-d627-33c5">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9bbc-f7a3-02ba-9727" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55e1-1002-0e29-483d" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Frag grenades" hidden="false" id="58e9-7417-58a8-92ac" type="selectionEntry" targetId="60e4-ca33-2e68-9afc">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="357b-f105-f002-530b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6ee-81bb-d52a-f5c5" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Krak grenades" hidden="false" id="6fe2-5940-4273-6249" type="selectionEntry" targetId="fa20-82bc-c7de-9e97">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="88e4-5dea-9011-a6e4" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57d3-1fe0-d8f6-388c" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Power sword" hidden="false" id="0f4c-5f37-67a9-9796" type="selectionEntry" targetId="59a9-57c1-fff9-ca75">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="696c-05bb-6ac8-30e1" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="edc3-6a2b-3e29-07bb" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <rules>
+        <rule name="Every Door a New Horror" id="dfff-24e5-b3e5-0985" hidden="false">
+          <description>Whilst Aeonid Thiel is locked in combat with an enemy unit that has the Corrupted or Daemon Unit Sub-type, he gains a +1 Tough.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Point(s)" typeId="9893-c379-920b-8982" value="115"/>
+        <cost name="Reaction Point(s)" typeId="c9ba-097e-c47f-ecc2" value="0"/>
+        <cost name="Auxiliary Detachment(s)" typeId="3e8e-05ee-be52-12d6" value="0"/>
+        <cost name="Apex Detachment(s)" typeId="159d-855c-533d-f592" value="0"/>
+        <cost name="Combined Warlord and Lord of War Points" typeId="14bd-cad0-cd3d-8b23" value="0"/>
+        <cost name="Mech LB" typeId="7275-cbe8-a563-7152" value="0"/>
+        <cost name="Tank Detachments" typeId="2cdf-186c-a655-d907" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Legiones Astartes" id="1aae-0d5f-c523-7fa1" targetId="9b32-f350-6aa9-9c09" importRootEntries="true"/>
@@ -2190,6 +2313,12 @@ When any Models in a Unit entirely composed of Models with this Special Rule ent
     <entryLink import="true" name="Inductii Squad" hidden="false" id="62c4-dbbe-1738-38c9" type="selectionEntry" targetId="455f-d06a-45b1-a332">
       <categoryLinks>
         <categoryLink targetId="88e6-d373-4152-0dd8" id="e68b-afe2-675e-aa36" primary="true" name="Troops"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Aeonid Thiel" hidden="false" id="134e-ebf4-2156-9852" type="selectionEntry" targetId="2b32-2779-5294-4f52">
+      <categoryLinks>
+        <categoryLink targetId="6dbf-654a-f06f-2d69" id="5857-5836-b126-1db2" primary="true" name="Command"/>
+        <categoryLink targetId="7fcf-5885-0a4d-ee31" id="26ad-945f-49b8-05d3" primary="false" name="Ultramarines"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
